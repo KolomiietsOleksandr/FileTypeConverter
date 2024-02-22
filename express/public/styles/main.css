@@ -1,0 +1,213 @@
+#header {
+    display: inline-block;
+    width: 70%;
+    margin-left: 15%;
+}
+
+#logoImg {
+    display: inline-block;
+}
+
+#headLT1 {
+    display: inline-block;
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 52px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin: 0px;
+    padding-left: 20px;
+    vertical-align: top;
+}
+
+#headLT2 {
+    display: inline-block;
+    color:rgb(250, 169, 22);
+    font-family: Zen Kaku Gothic New;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 52px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin: 0px;
+    vertical-align: top;
+}
+
+#hr-line1 {
+    color: rgb(109, 103, 110);
+}
+
+.headerButtons {
+    display: inline-block;
+    color: rgb(109, 103, 110);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    font-family: Zen Kaku Gothic New;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 46px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    float: right;
+    margin-left: 50px;
+}
+
+.headerButtons:hover {
+    color:rgb(250, 169, 22);
+}
+
+#main {
+    position: inline-block;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 30px;
+}
+
+#mainTextDiv {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+
+#mainText {
+    font-family: Zen Kaku Gothic New;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 119px;
+    letter-spacing: -1.5%;
+    text-align: left;
+
+    color: rgb(109, 103, 110);
+    margin-top: -5px;
+}
+
+#mainText span {
+    color: rgb(250, 169, 22);
+}
+
+#productButton {
+    border-radius: 20px;
+    background-color: rgb(250, 169, 22);
+    border: none;
+    width: 243px;
+    height: 69px;
+    margin-top: -30px;
+
+    color: rgb(255, 255, 255);
+    font-family: Zen Kaku Gothic New;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: -1.5%;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+#mainPhotoDiv {
+    display: inline-block;
+    width: 55%;
+}
+
+#mainImg {
+    width: 100%;
+    float: right;
+}
+
+#why {
+    display: inline-block;
+    width: 70%;
+    margin-left: 15%;
+}
+
+#whyMainText {
+    text-align: center;
+
+    color: rgb(250, 169, 22);
+    font-family: Zen Kaku Gothic New;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: -1.5%;
+}
+
+.whyCon {
+    display: inline-block;
+    width: 33%;
+}
+
+#whyConMiddle {
+    display: inline-block;
+    width: 33%;
+    border-left: 1px solid rgb(109, 103, 110);
+    border-right: 1px solid rgb(109, 103, 110);
+}
+
+.whyConT {
+    text-align: center;
+
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 0px;
+    letter-spacing: -1.5%;
+}
+
+.whyConM {
+    text-align: center;
+    margin: 55px;
+
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -1.5%;
+}
+
+#footer {
+    display: inline-block;
+    width: 70%;
+    margin-left: 15%;
+}
+
+#hr-line2 {
+    color: rgb(109, 103, 110);
+}
+
+#footerText {
+    display: inline-block;
+    width: 35%;
+
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 29px;
+    letter-spacing: -1.5%;
+    text-align: left;
+}
+
+.footerButtons {
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 46px;
+    letter-spacing: -1.5%;
+    text-align: left;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    float: right;
+    margin-left: 30px;
+    margin-top: 20px;
+}

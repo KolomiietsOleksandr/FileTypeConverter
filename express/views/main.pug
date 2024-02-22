@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title File Type Converter
+    link(rel='stylesheet', href='/styles/main.css')
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  body
+    header
+      div#header
+        img#logoImg(src="/images/Logo.png", alt="Logo")
+        p#headLT1 FileType
+        p#headLT2 Converter
+        button.headerButtons(type='button') Login/Register
+        button.headerButtons(type='button') Converter
+        button.headerButtons(type='button') Home
+        hr#hr-line1
+    main
+      div#main
+        div#mainTextDiv
+          p#mainText Get Started with File Type Converter <span>Now!</span>
+          button#productButton(type='button') Click here
+        div#mainPhotoDiv
+          img#mainImg(src="/images/FilesPhoto2.png", alt="MainImg")
+      div#why
+        p#whyMainText Why Choose File Type Converter?
+        div.whyCon
+          p.whyConT Ease of Use
+          p.whyConM Our service is designed for user convenience. Simply upload your files, choose the desired conversion format, and get the result instantly!
+        div#whyConMiddle
+          p.whyConT No Registration Required
+          p.whyConM File Type Converter is available to all users absolutely free of charge and without the need for registration. Simply convert your files.
+        div.whyCon
+          p.whyConT Supported Formats
+          p.whyConM We support a vast array of file formats for conversion. No matter what type of file you have, we have a suitable format for conversion.
+        div#whyConBottom
+          p.whyConT Security and Privacy
+          p.whyConM We value your privacy. All uploaded files are promptly deleted from our servers after the conversion process is completed. We also utilize advanced encryption methods to ensure the security of your data.
+    footer
+      div#footer
+        hr.hr-line2
+        p#footerText © 2014–2024 FileTypeConverter ltd. All rights reserved Terms of Use / Privacy Policy
+        button.footerButtons(type='button') About
+        button.footerButtons(type='button') Help
+        button.footerButtons(type='button') Security
