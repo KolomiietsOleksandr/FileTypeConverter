@@ -1,5 +1,6 @@
 const express = require('express');
 const mainHandler = require('./handlers/mainHandler');
+const authorizationHandler = require('./handlers/authorizationHandler');
 const path = require('path');
 
 const app = express();
@@ -15,6 +16,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/main', mainHandler.main);
+
+app.get("/converter", mainHandler.uploadPage);
+
+app.get("/authorization", authorizationHandler.auth);
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title File Type Converter
+    link(rel='stylesheet', href='/styles/main.css')
+    link(rel='stylesheet', href='/styles/upload.css')
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/77ecbc8fc5.js" crossorigin="anonymous"></script>
+  body
+    header
+      div#header
+        img#logoImg(src="/images/Logo.png", alt="Logo")
+        p#headLT1 FileType
+        p#headLT2 Converter
+        button#headerButtons3(type='button') <i class="fa-regular fa-user"></i>
+        button#headerButtons2(type='button') Converter
+        button#headerButtons1(type='button') Home
+        hr#hr-line1
+    main
+        div#upload
+            div#uploadTextDiv
+                p#uploadText Choose file:
+                input#fileInput(type='file', multiple='false', onchange='handleFileSelect(event)')
+                label#fileInputLabel(for='fileInput')
+                    img(src='/images/File.png', alt='Choose file')
+            div#uploadZone(ondrop='handleFileDrop(event)', ondragover='event.preventDefault()')
+        div#instruction
+            div#howToUse
+                p#howTitle How to use?
+                p.howMain <span>Upload Your File:</span> Click on the "Upload" button or drag and drop your file directly onto the website's interface. Supported file types typically include documents, images, audio, and video files.
+                p.howMain <span>Select Output Format:</span> Choose the desired output format for your file conversion. This could be a different document format, image format, audio format, or video format, depending on the type of file you uploaded.
+                p.howMain <span>Initiate Conversion:</span> Once you've selected the output format, click on the "Convert" button to begin the conversion process.
+                p.howMain <span>Wait for Conversion:</span> The website will process your file and convert it into the selected format. The time it takes for conversion depends on the size and complexity of your file.
+                p.howMain <span>Download Converted File:</span> Once the conversion is complete, you'll be provided with a link or button to download the converted file. Click on it to save the converted file to your device.
+            div#howPhoto
+                img#howImg(src="/images/FilesPhoto1 1.png", alt="Image2")
+    footer
+      div#footer
+        hr.hr-line2
+        p#footerText © 2014–2024 FileTypeConverter ltd. All rights reserved Terms of Use / Privacy Policy
+
+    <script src="scripts/headerButtons.js"></script>

@@ -1,3 +1,7 @@
+#body {
+    background-color: rgb(251, 255, 255);
+}
+
 #header {
     display: inline-block;
     width: 70%;
@@ -39,7 +43,7 @@
     color: rgb(109, 103, 110);
 }
 
-.headerButtons {
+#headerButtons1, #headerButtons2, #headerButtons3{
     display: inline-block;
     color: rgb(109, 103, 110);
     border: none;
@@ -56,7 +60,7 @@
     margin-left: 50px;
 }
 
-.headerButtons:hover {
+#headerButtons1:hover, #headerButtons2:hover, #headerButtons3:hover {
     color:rgb(250, 169, 22);
 }
 
@@ -97,7 +101,7 @@
     height: 69px;
     margin-top: -30px;
 
-    color: rgb(255, 255, 255);
+    color: rgb(251, 255, 255);
     font-family: Zen Kaku Gothic New;
     font-size: 40px;
     font-weight: 700;
@@ -191,23 +195,4 @@
     line-height: 29px;
     letter-spacing: -1.5%;
     text-align: left;
-}
-
-.footerButtons {
-    color: rgb(109, 103, 110);
-    font-family: Zen Kaku Gothic New;
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 46px;
-    letter-spacing: -1.5%;
-    text-align: left;
-
-    background-color: transparent;
-    border: none;
-
-    cursor: pointer;
-
-    float: right;
-    margin-left: 30px;
-    margin-top: 20px;
 }
