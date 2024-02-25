@@ -47,6 +47,8 @@ app.get('/profile', userController.getUserProfile);
 app.put('/change-password', userController.changePassword);
 app.put('/change-email', userController.changeEmail);
 
+app.delete('/delete-user', userController.deleteUser);
+
 app.get('/check-auth', (req, res) => {
   if (req.session.userId) {
     res.status(200).json({ authenticated: true });

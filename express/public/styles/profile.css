@@ -71,3 +71,18 @@ input {
     line-height: 45px;
     letter-spacing: -1.5%;
 }
+
+#delete {
+    width: 51%;
+    margin-left: 25%;
+    margin-top: 5%;
+
+    border: none;
+    background-color: rgb(250, 22, 41);
+    color: whitesmoke;
+    font-family: Zen Kaku Gothic New;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: -1.5%;
+}

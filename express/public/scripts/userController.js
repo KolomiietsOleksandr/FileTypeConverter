@@ -41,3 +41,18 @@ exports.changeEmail = async (req, res) => {
       res.status(500).json({ message: 'Server Error' });
   }
 };
+
+exports.deleteUser = async (req, res) => {
+  const userId = req.session.userId;
+
+  try {
+    await User.findByIdAndDelete(userId);
+
+    req.session.destroy();
+
+    res.status(200).json({ message: 'User deleted successfully' });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ message: 'Server Error' });
+  }
+};

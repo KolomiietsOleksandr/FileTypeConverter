@@ -48,4 +48,21 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error('Error:', error);
       });
     });
+    document.getElementById("delete").addEventListener("click", function(event) {
+        event.preventDefault();
+
+        fetch('/delete-user', {
+          method: 'DELETE'
+        })
+        .then(response => {
+          if (response.ok) {
+            window.location.href = '/main';
+          } else {
+            console.error('Error:', response.statusText);
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+      });
   });
