@@ -7,7 +7,7 @@ html
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/77ecbc8fc5.js" crossorigin="anonymous"></script>
+    script(src="https://kit.fontawesome.com/77ecbc8fc5.js", crossorigin="anonymous")
   body
     header
       div#header
@@ -27,16 +27,16 @@ html
 
         div#cp
             form(action="/change-password", method="POST")
-            label(for="newPassword") New Password:
-            input(type="password", id="newPassword", name="newPassword", required)
-            button#cpb(type="submit") Change Password
+              label(for="newPassword") New Password:
+              input(type="password", id="newPassword", name="newPassword", required)
+              button#cpb(type="button") Change Password
 
         div#ce
             form(action="/change-email", method="POST")
-            label(for="newEmail") New Email:
-            input(type="email", id="newEmail", name="newEmail", required)
-            button#ceb(type="submit") Change Email
+              label(for="newEmail") New Email:
+              input(type="email", id="newEmail", name="newEmail", required)
+              button#ceb(type="button") Change Email
 
-    <script src="scripts/headerButtons.js"></script>
-    <script src="scripts/userController.js"></script>
-    <script src="scripts/changeData.js"></script>
+    script(src="scripts/headerButtons.js")
+    script(src="scripts/userController.js")
+    script(src="scripts/changeData.js")

@@ -22,7 +22,7 @@ exports.changePassword = async (req, res) => {
 
   try {
       await User.findByIdAndUpdate(userId, { password: newPassword });
-
+      res.status(200).json({ message: 'Password updated successfully' });
   } catch (error) {
       console.error(error.message);
       res.status(500).json({ message: 'Server Error' });
@@ -35,9 +35,9 @@ exports.changeEmail = async (req, res) => {
 
   try {
       await User.findByIdAndUpdate(userId, { email: newEmail });
-
+      res.status(200).json({ message: 'Email updated successfully' });
   } catch (error) {
       console.error(error.message);
       res.status(500).json({ message: 'Server Error' });
   }
-}
+};
