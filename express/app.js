@@ -37,14 +37,15 @@ app.get('/main', mainHandler.main);
 app.get("/converter", mainHandler.uploadPage);
 
 app.get("/login", authorizationHandler.loginRef);
-
 app.post('/login', loginController.loginUser);
 
 app.get("/register", authorizationHandler.refisterRef);
-
 app.post('/register', registerController.registerUser);
 
 app.get('/profile', userController.getUserProfile);
+
+app.put('/change-password', userController.changePassword);
+app.put('/change-email', userController.changeEmail);
 
 app.get('/check-auth', (req, res) => {
   if (req.session.userId) {
