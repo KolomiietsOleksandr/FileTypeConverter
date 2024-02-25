@@ -1,11 +1,16 @@
 const express = require('express');
 const mainHandler = require('./handlers/mainHandler');
 const authorizationHandler = require('./handlers/authorizationHandler');
+const registerController = require('./public/scripts/registerController');
 const path = require('path');
 const connectDB = require('./config/db');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -25,6 +30,8 @@ app.get("/converter", mainHandler.uploadPage);
 app.get("/login", authorizationHandler.loginRef);
 
 app.get("/register", authorizationHandler.refisterRef);
+
+app.post('/register', registerController.registerUser);
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
