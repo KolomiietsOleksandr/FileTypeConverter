@@ -2,12 +2,20 @@ const express = require('express');
 const mainHandler = require('./handlers/mainHandler');
 const authorizationHandler = require('./handlers/authorizationHandler');
 const registerController = require('./public/scripts/registerController');
+const loginController = require('./public/scripts/loginController');
 const path = require('path');
 const connectDB = require('./config/db');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
+const session = require('express-session');;
 
 const app = express();
 const port = 3000;
+
+app.use(session({
+  secret: 'secret-key',
+  resave: false,
+  saveUninitialized: false
+}));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -28,6 +36,8 @@ app.get('/main', mainHandler.main);
 app.get("/converter", mainHandler.uploadPage);
 
 app.get("/login", authorizationHandler.loginRef);
+
+app.post('/login', loginController.loginUser);
 
 app.get("/register", authorizationHandler.refisterRef);
 
