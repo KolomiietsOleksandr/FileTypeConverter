@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title File Type Converter
+    link(rel='stylesheet', href='/styles/main.css')
+    link(rel='stylesheet', href='/styles/profile.css')
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/77ecbc8fc5.js" crossorigin="anonymous"></script>
+  body
+    header
+      div#header
+        img#logoImg(src="/images/Logo.png", alt="Logo")
+        p#headLT1 FileType
+        p#headLT2 Converter
+        button#headerButtons3(type='button') <i class="fa-regular fa-user"></i>
+        button#headerButtons2(type='button') Converter
+        button#headerButtons1(type='button') Home
+        hr#hr-line1
+    main
+      div#Profile
+        p#Title User profile:
+        p#userName Username: #{user.name}
+        p#userEmail Email: #{user.email}
+        p#userPassword Password: #{user.password}
+
+        div#cp
+            form(action="/change-password", method="POST")
+            label(for="newPassword") New Password:
+            input(type="password", id="newPassword", name="newPassword", required)
+            button#cpb(type="submit") Change Password
+
+        div#ce
+            form(action="/change-email", method="POST")
+            label(for="newEmail") New Email:
+            input(type="email", id="newEmail", name="newEmail", required)
+            button#ceb(type="submit") Change Email
+
+    <script src="scripts/headerButtons.js"></script>

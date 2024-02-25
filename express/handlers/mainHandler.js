@@ -10,5 +10,5 @@ function uploadPage(req, res) {
 
 module.exports = {
   main,
-  uploadPage
+  uploadPage,
 };

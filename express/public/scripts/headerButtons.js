@@ -7,9 +7,20 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("headerButtons1").addEventListener("click", function() {
         window.location.href = "/main" });
 
-    document.getElementById("headerButtons3").addEventListener("click", function() {
-        window.location.href= "/login";
-    });
+    document.getElementById("headerButtons3").addEventListener("click", async function() {
+        try {
+            const response = await fetch('/check-auth');
+            const data = await response.json();
+
+            if (data.authenticated) {
+            window.location.href = "/profile";
+            } else {
+            window.location.href = "/login";
+            }
+        } catch (error) {
+            console.error('Error checking authentication:', error);
+        }
+        });
 
     var SignUpBut = document.getElementById("SignUpBut");
 
