@@ -20,12 +20,27 @@ html
         hr#hr-line1
     main
         div#upload
-            div#uploadTextDiv
-                p#uploadText Choose file:
-                input#fileInput(type='file', multiple='false', onchange='handleFileSelect(event)')
-                label#fileInputLabel(for='fileInput')
-                    img(src='/images/File.png', alt='Choose file')
-            div#uploadZone(ondrop='handleFileDrop(event)', ondragover='event.preventDefault()')
+            div#zone
+              div#uploadTextDiv
+                  p#uploadText Choose file:
+                  input#fileInput(type='file', multiple='false', onchange='handleFileSelect(event)')
+                  label#fileInputLabel(for='fileInput')
+                      img(src='/images/File.png', alt='Choose file')
+              div#uploadZone(ondrop='handleFileDrop(event)', ondragover='event.preventDefault()')
+                p Drag and drop your files here. <br> 100 MB maximum file size or you need to register.
+            div#converterPanel
+              div#parametersName
+                p#fn Filename
+                p#s Size
+                p#for Format
+                p#nf New format
+              div#parametersFile
+                p#fileName
+                p#fileSize
+                p#fileFormat
+                select#formatSelect
+              button#convertButton(type='button') Convert
+        hr#hr-line3
         div#instruction
             div#howToUse
                 p#howTitle How to use?

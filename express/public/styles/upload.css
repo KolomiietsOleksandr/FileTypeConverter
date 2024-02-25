@@ -5,18 +5,14 @@ main {
 
 #upload {
     margin-left: 25%;
-    width: 50%;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+    width: 70%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #uploadTextDiv {
     background-color: rgb(250, 169, 22);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    width: 70%;
 }
 
 #uploadText {
@@ -47,21 +43,112 @@ main {
 
 #uploadZone {
     border: 2px dashed #ccc;
-    border-radius: 5px;
     padding: 20px;
     text-align: center;
     font-size: 18px;
     color: #888;
     background-color: #f9f9f9;
+    width: 64.6%;
   }
 
-  #uploadZone:hover {
+#uploadZone p {
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 0%;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#uploadZone:hover {
     border-color: #999;
-  }
+}
 
-  #uploadZone.dragover {
+#uploadZone.dragover {
     border-color: #33cc33;
-  }
+}
+
+#zone {
+    display: block;
+}
+
+#converterPanel {
+    display: none;
+    margin-left: -80px;
+}
+
+#parametersName {
+    display: flex;
+    justify-content: row;
+    margin-bottom: -20px;
+}
+
+#fn, #s, #for {
+    width: 100px;
+    margin-right: 100px;
+    color: rgb(250, 169, 22);
+    font-family: Zen Kaku Gothic New;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0%;
+}
+
+#nf {
+    margin-right: 0px;
+    width: 120px;
+    color: rgb(250, 169, 22);
+    font-family: Zen Kaku Gothic New;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0%;
+}
+
+#convertButton {
+    margin-left: 30%;
+    margin-top: 20px;
+    margin-right: 0px;
+    width: 120px;
+    color: whitesmoke;
+    background-color: rgb(250, 169, 22);
+    border: none;
+    font-family: Zen Kaku Gothic New;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0%;
+}
+
+#parametersFile {
+    display: flex;
+    justify-content: row;
+
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 0%;
+}
+
+#fileName, #fileSize, #fileFormat, #formatSelect {
+    margin-right: 100px;
+    width: 100px;
+}
+
+#formatSelect{
+    margin-right: 0px;
+    border: none;
+
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 0%;
+}
+
+#convertButton {
+    display: inline-block;
+}
 
 
 #instruction {
