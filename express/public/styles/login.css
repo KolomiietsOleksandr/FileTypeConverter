@@ -1,0 +1,99 @@
+main {
+    width: 70%;
+}
+
+#Form {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 55%;
+}
+
+.auText {
+    color: rgb(250, 169, 22);
+    font-family: Zen Kaku Gothic New;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: -1.5%;
+    margin-top: 0px;
+    margin-bottom: -5px;
+}
+
+#question {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+.auSText {
+    width: 250px;
+
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: -1.5%;
+}
+
+#SignUpBut {
+    color: rgb(250, 169, 22);
+    font-family: Zen Kaku Gothic New;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: -1.5%;
+
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+#login{
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#login form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: -1.5%;
+    text-align: left;
+}
+
+input {
+    border: 1px solid rgb(109, 103, 110);
+    margin-top: 5%;
+    width: 100%;
+
+    color: rgb(109, 103, 110);
+    font-family: Zen Kaku Gothic New;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: -1.5%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.authButton {
+    width: 102%;
+
+    border: none;
+    background-color: rgb(250, 169, 22);
+    color: whitesmoke;
+    font-family: Zen Kaku Gothic New;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: -1.5%;
+}

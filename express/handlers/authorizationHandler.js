@@ -1,7 +1,12 @@
-function auth(req, res) {
-    res.render('authorization');
+function loginRef(req, res) {
+    res.render('login');
+}
+
+function refisterRef(req, res) {
+    res.render('register');
 }
 
 module.exports = {
-    auth,
+    loginRef,
+    refisterRef,
 };
