@@ -170,6 +170,22 @@ main {
     margin-left: 145px;
 }
 
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgb(250, 169, 22);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0%;
+  }
+
 #instruction {
     display: inline-block;
 }

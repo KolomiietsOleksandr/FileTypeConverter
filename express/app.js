@@ -6,8 +6,10 @@ const loginController = require('./public/scripts/loginController');
 const userController = require('./public/scripts/userController');
 const path = require('path');
 const connectDB = require('./config/db');
-const bodyParser = require('body-parser')
-const session = require('express-session');;
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const http = require('http');
+const WebSocket = require('ws');
 
 const app = express();
 const port = 3000;
@@ -57,6 +59,30 @@ app.get('/check-auth', (req, res) => {
   }
 });
 
-app.listen(port, () => {
+const server = http.createServer(app);
+const wss = new WebSocket.Server({ server });
+
+wss.on('connection', function connection(ws) {
+  console.log('New client connected');
+
+  function sendPeriodicMessage() {
+    ws.send('Use instruction if you don`t know what to do.');
+
+    setTimeout(() => {
+      ws.send('Register to convert file more than 20MB.');
+    }, 60000);
+  }
+
+  sendPeriodicMessage();
+
+  const intervalId = setInterval(sendPeriodicMessage, 60000);
+
+  ws.on('close', function() {
+    clearInterval(intervalId);
+    console.log('Client disconnected');
+  });
+});
+
+server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

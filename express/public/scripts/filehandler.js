@@ -132,3 +132,29 @@ document.getElementById('convertButton').addEventListener('click', function() {
         console.error(error);
     });
 });
+
+const socket = new WebSocket('ws://localhost:3000');
+
+socket.onopen = function() {
+  console.log('Connected to WebSocket server');
+};
+
+socket.onmessage = function(event) {
+  const notification = document.createElement('div');
+  notification.className = 'notification';
+  notification.textContent = event.data;
+
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    document.body.removeChild(notification);
+  }, 5000);
+};
+
+socket.onerror = function(error) {
+  console.error('WebSocket error: ', error);
+};
+
+function sendMessage(message) {
+  socket.send(message);
+}
