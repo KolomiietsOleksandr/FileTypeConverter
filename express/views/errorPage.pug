@@ -3,7 +3,6 @@ html
   head
     title File Type Converter
     link(rel='stylesheet', href='/styles/main.css')
-    link(rel='stylesheet', href='/styles/register.css')
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -19,20 +18,10 @@ html
         button#headerButtons1(type='button') Home
         hr#hr-line1
     main
-      div#Form
-        p.auText Registration
-        div#question
-          p.auSText Already have an account?
-          button#SignInBut Sign in
-        div#register
-          form(action="/register", method="POST")
-            label(for="email") Name:
-            input(type="text", id="name", name="name", required)
-            label(for="email") Email:
-            input(type="email", id="email", name="email", required)
-            label(for="password") Password:
-            input(type="password", id="password", name="password", required)
-            button.authButton(type="submit") Register
-            p#errorEmail User with this email already exists.
+      img#errorImg(src="/images/TriangularFlag.png", alt="Error Img")
+      p#errorTextM Ooops... Something went wrong <br> Back to website and try again.
 
     <script src="scripts/headerButtons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+

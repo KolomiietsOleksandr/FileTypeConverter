@@ -11,6 +11,7 @@ function handleFileSelect(event) {
         })
         .catch(error => {
             console.error('There was a problem with the axios operation:', error);
+            window.location.href = "/errors";
         });
 }
 
@@ -28,6 +29,7 @@ function handleFileDrop(event) {
         })
         .catch(error => {
             console.error('There was a problem with the axios operation:', error);
+            window.location.href = "/errors";
         });
 }
 
@@ -106,6 +108,7 @@ document.getElementById('convertButton').addEventListener('click', function() {
     })
     .catch(error => {
         console.error(error);
+        window.location.href = "/errors";
     });
 });
 
@@ -129,6 +132,7 @@ socket.onmessage = function(event) {
 
 socket.onerror = function(error) {
     console.error('WebSocket error: ', error);
+    window.location.href = "/errors";
 };
 
 function sendMessage(message) {

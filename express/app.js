@@ -51,12 +51,18 @@ app.put('/change-email', userController.changeEmail);
 
 app.delete('/delete-user', userController.deleteUser);
 
+app.get('/errors', mainHandler.errorP);
+
 app.get('/check-auth', (req, res) => {
   if (req.session.userId) {
     res.status(200).json({ authenticated: true });
   } else {
     res.status(401).json({ authenticated: false });
   }
+});
+
+app.get('*', (req, res) => {
+  res.redirect('/errors');
 });
 
 const server = http.createServer(app);
@@ -77,8 +83,6 @@ wss.on('connection', function connection(ws) {
     }, 60000);
   }
 
-  sendPeriodicMessage();
-
   const intervalId = setInterval(sendPeriodicMessage, 60000);
 
   ws.on('close', function() {
@@ -86,6 +90,8 @@ wss.on('connection', function connection(ws) {
     console.log('Client disconnected');
   });
 });
+
+
 
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
