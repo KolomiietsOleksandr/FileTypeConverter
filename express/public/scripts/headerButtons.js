@@ -42,4 +42,37 @@ document.addEventListener("DOMContentLoaded", function() {
         SignInBut.addEventListener("click", function() {
             window.location.href = "/login";
         })};
+
+    var errorLogin = document.getElementById('errorLogin');
+    var loginForm = document.querySelector('#Form form');
+
+    if (errorLogin && loginForm) {
+        loginForm.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const email = formData.get('email');
+            const password = formData.get('password');
+
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                if (!response.ok) {
+                    const errorMessage = await response.json();
+                    errorLogin.textContent = errorMessage.error;
+                    errorLogin.style.display = 'block';
+                } else {
+                    window.location.href = "/converter";
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    }
 });

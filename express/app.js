@@ -69,7 +69,11 @@ wss.on('connection', function connection(ws) {
     ws.send('Use instruction if you don`t know what to do.');
 
     setTimeout(() => {
-      ws.send('Register to convert file more than 20MB.');
+      ws.send('FileType Converter supports only photos and audio.');
+    }, 60000);
+
+    setTimeout(() => {
+      ws.send('you need login if you want convert files more than 10MB.');
     }, 60000);
   }
 
