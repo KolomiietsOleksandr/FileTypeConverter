@@ -112,15 +112,23 @@ document.getElementById('convertButton').addEventListener('click', function() {
     .then(response => {
         const url = window.URL.createObjectURL(new Blob([response.data]));
         const link = document.createElement('a');
+
         link.href = url;
         link.setAttribute('download', `converted.${newFormat.toLowerCase()}`);
         document.body.appendChild(link);
         link.click();
         window.URL.revokeObjectURL(url);
+
+        document.getElementById('zone').style.display = 'none';
+        document.getElementById('converterPanel').style.display = 'none';
+        const gifImage = document.getElementById('comfirmGif');
+        gifImage.style.display = 'block';
+
+        setTimeout(() => {
+            window.location.href = "/converter";
+        }, 1200);
     })
     .catch(error => {
         console.error(error);
     });
 });
-
-

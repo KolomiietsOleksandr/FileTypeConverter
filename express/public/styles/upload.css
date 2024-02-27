@@ -152,6 +152,23 @@ main {
     display: inline-block;
 }
 
+#unsup {
+    display: none;
+    color: rgb(220, 3, 3);
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0%;
+
+    margin-left: 115px;
+}
+
+#comfirmGif {
+    display: none;
+    width: 35%;
+
+    margin-left: 145px;
+}
 
 #instruction {
     display: inline-block;
