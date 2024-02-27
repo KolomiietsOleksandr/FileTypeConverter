@@ -1,5 +1,6 @@
 const express = require('express');
 const mainHandler = require('./handlers/mainHandler');
+const morgan = require('morgan');
 const authorizationHandler = require('./handlers/authorizationHandler');
 const registerController = require('./public/scripts/registerController');
 const loginController = require('./public/scripts/loginController');
@@ -11,6 +12,7 @@ const session = require('express-session');
 const http = require('http');
 const WebSocket = require('ws');
 const cors = require('cors');
+const fs = require('fs');
 
 const app = express();
 const port = 3000;
@@ -27,6 +29,10 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+const accessLogStream = fs.createWriteStream(path.join('./logs/access.log'), { flags: 'a' });
+
+app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(session({
   secret: 'secret-key',
