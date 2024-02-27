@@ -10,9 +10,23 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const http = require('http');
 const WebSocket = require('ws');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
+
+const whitelist = ['http://localhost:3000', 'http://localhost:3001'];
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
+
+app.use(cors(corsOptions));
 
 app.use(session({
   secret: 'secret-key',
@@ -90,8 +104,6 @@ wss.on('connection', function connection(ws) {
     console.log('Client disconnected');
   });
 });
-
-
 
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
