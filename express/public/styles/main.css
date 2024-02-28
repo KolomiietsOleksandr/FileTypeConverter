@@ -112,6 +112,10 @@
     cursor: pointer;
 }
 
+#productButton:hover {
+    background-color: rgb(198, 129, 0);
+}
+
 #mainPhotoDiv {
     display: inline-block;
     width: 55%;
@@ -195,4 +199,20 @@
     line-height: 29px;
     letter-spacing: -1.5%;
     text-align: left;
+}
+
+#errorTextM {
+    display: block;
+    color: rgb(220, 3, 3);
+    font-family: Zen Kaku Gothic New;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0%;
+
+    text-align: center;
+}
+
+#errorImg {
+    width: 15%;
+    margin-left: 750px;
 }

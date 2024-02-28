@@ -18,10 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
           window.location.reload();
         } else {
           console.error('Error:', response.statusText);
+          res.redirect("/errors");
         }
       })
       .catch(error => {
         console.error('Error:', error);
+        res.redirect("/errors");
       });
     });
 
@@ -42,10 +44,12 @@ document.addEventListener("DOMContentLoaded", function() {
           window.location.reload();
         } else {
           console.error('Error:', response.statusText);
+          res.redirect("/errors");
         }
       })
       .catch(error => {
         console.error('Error:', error);
+        res.redirect("/errors");
       });
     });
     document.getElementById("delete").addEventListener("click", function(event) {
@@ -59,10 +63,12 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = '/main';
           } else {
             console.error('Error:', response.statusText);
+            res.redirect("/errors");
           }
         })
         .catch(error => {
           console.error('Error:', error);
+          res.redirect("/errors");
         });
       });
   });

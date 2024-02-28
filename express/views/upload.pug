@@ -20,12 +20,29 @@ html
         hr#hr-line1
     main
         div#upload
-            div#uploadTextDiv
-                p#uploadText Choose file:
-                input#fileInput(type='file', multiple='false', onchange='handleFileSelect(event)')
-                label#fileInputLabel(for='fileInput')
-                    img(src='/images/File.png', alt='Choose file')
-            div#uploadZone(ondrop='handleFileDrop(event)', ondragover='event.preventDefault()')
+            div#zone
+              div#uploadTextDiv
+                  p#uploadText Choose file:
+                  input#fileInput(type='file', multiple='false', onchange='handleFileSelect(event)')
+                  label#fileInputLabel(for='fileInput')
+                      img(src='/images/File.png', alt='Choose file')
+              div#uploadZone(ondrop='handleFileDrop(event)', ondragover='event.preventDefault()')
+                p Drag and drop your files here. <br> 10 MB maximum file size or you need to register.
+            div#converterPanel
+              div#parametersName
+                p#fn Filename
+                p#s Size
+                p#for Format
+                p#nf New format
+              div#parametersFile
+                p#fileName
+                p#fileSize
+                p#fileFormat
+                select#formatSelect
+              button#convertButton(type='button') Convert
+            p#unsup The file format is not supported, try another one.
+            img#comfirmGif(src='/images/confirm.gif', alt='Comfirm Gif')
+        hr#hr-line3
         div#instruction
             div#howToUse
                 p#howTitle How to use?
@@ -42,3 +59,7 @@ html
         p#footerText © 2014–2024 FileTypeConverter ltd. All rights reserved Terms of Use / Privacy Policy
 
     <script src="scripts/headerButtons.js"></script>
+    <script src="scripts/filehandler.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+

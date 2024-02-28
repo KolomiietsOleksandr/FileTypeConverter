@@ -12,7 +12,7 @@ exports.getUserProfile = async (req, res) => {
     res.render('userProfile', { user });
   } catch (error) {
     console.error(error.message);
-    res.status(500).send('Server Error');
+    res.redirect("/errors");
   }
 };
 
@@ -25,7 +25,7 @@ exports.changePassword = async (req, res) => {
       res.status(200).json({ message: 'Password updated successfully' });
   } catch (error) {
       console.error(error.message);
-      res.status(500).json({ message: 'Server Error' });
+      res.redirect("/errors");
   }
 };
 
@@ -38,7 +38,7 @@ exports.changeEmail = async (req, res) => {
       res.status(200).json({ message: 'Email updated successfully' });
   } catch (error) {
       console.error(error.message);
-      res.status(500).json({ message: 'Server Error' });
+      res.redirect("/errors");
   }
 };
 
@@ -53,6 +53,6 @@ exports.deleteUser = async (req, res) => {
     res.status(200).json({ message: 'User deleted successfully' });
   } catch (error) {
     console.error(error.message);
-    res.status(500).json({ message: 'Server Error' });
+    res.redirect("/errors");
   }
 };

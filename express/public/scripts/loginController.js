@@ -7,7 +7,7 @@ exports.loginUser = async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user || user.password !== password) {
-      return res.status(401).json({ message: 'Invalid email or password' });
+      return res.status(401).json({ error: 'Wrong email or password. Try again...' });
     }
 
     req.session.userId = user._id;
@@ -15,6 +15,6 @@ exports.loginUser = async (req, res) => {
     res.redirect("/converter");
   } catch (error) {
     console.error(error.message);
-    res.status(500).send('Server Error');
+    res.redirect("/errors");
   }
 };
