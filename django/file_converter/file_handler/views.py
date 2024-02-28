@@ -21,21 +21,29 @@ def upload_file(request):
 
         file_type = determine_file_type(file)
 
+        #file_path = os.path.join(settings.MEDIA_ROOT, file.name)
+
+        #with open(file_path, 'wb') as destination:
+        #    for chunk in file.chunks():
+        #        destination.write(chunk)
+
         if file_type.startswith("image"):
             converted_file_path = convert_image(file, new_file_type)
         elif file_type.startswith("audio"):
             converted_file_path = convert_audio(file, new_file_type)
-        elif file_type.startswith("video"):
-            converted_file_path = convert_video(file, new_file_type)
         else:
             return JsonResponse({'error': 'Unsupported file type'}, status=400)
 
         with open(converted_file_path, 'rb') as f:
+            file_content = f.read()
             filename = os.path.basename(converted_file_path)
             content_type = mimetypes.guess_type(filename)[0]
-            response = HttpResponse(f, content_type=content_type)
+            response = HttpResponse(file_content, content_type=content_type)
             response['Content-Disposition'] = f'attachment; filename="{filename}"'
-            return response
+
+        os.remove(converted_file_path)
+
+        return response
     else:
         return JsonResponse({'error': 'Method not allowed'}, status=405)
 
@@ -60,11 +68,4 @@ def convert_audio(file, new_file_type):
     audio = AudioSegment.from_file(file)
     converted_file_path = os.path.join(settings.MEDIA_ROOT, f'ConvertedAudio.{new_file_type.lower()}')
     audio.export(converted_file_path, format=new_file_type.lower())
-    return converted_file_path
-
-
-def convert_video(file, new_file_type):
-    video = VideoFileClip(file.temporary_file_path())
-    converted_file_path = os.path.join(settings.MEDIA_ROOT, f'ConvertedVideo.{new_file_type.lower()}')
-    video.write_videofile(converted_file_path)
     return converted_file_path
