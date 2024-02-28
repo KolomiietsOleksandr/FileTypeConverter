@@ -70,6 +70,12 @@ input {
     font-weight: 400;
     line-height: 45px;
     letter-spacing: -1.5%;
+
+    cursor: pointer;
+}
+
+#ceb:hover, #cpb:hover {
+    background-color: rgb(198, 129, 0);
 }
 
 #delete {
@@ -85,4 +91,10 @@ input {
     font-weight: 400;
     line-height: 45px;
     letter-spacing: -1.5%;
+
+    cursor: pointer;
+}
+
+#delete:hover {
+    background-color: rgb(153, 0, 13);
 }

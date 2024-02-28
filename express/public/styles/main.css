@@ -112,6 +112,10 @@
     cursor: pointer;
 }
 
+#productButton:hover {
+    background-color: rgb(198, 129, 0);
+}
+
 #mainPhotoDiv {
     display: inline-block;
     width: 55%;
