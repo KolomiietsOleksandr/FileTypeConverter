@@ -34,9 +34,10 @@ function handleFileDrop(event) {
 }
 
 function handleFile(file) {
-    var supportedFormats = ['JPEG', 'PNG', 'GIF', 'BMP', 'WAV', 'MP3'];
+    var supportedFormats = ['JPEG', 'PNG', 'GIF', 'BMP', 'WAV', 'MP3', 'MPEG'];
 
     if (!supportedFormats.includes(file.type.split('/')[1].toUpperCase())) {
+        console.log(file.type.split('/')[1].toUpperCase());
         document.getElementById('unsup').style.display = 'block';
     }
     else {

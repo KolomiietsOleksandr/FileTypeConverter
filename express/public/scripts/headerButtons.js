@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     errorRegister.textContent = errorMessage.error;
                     errorRegister.style.display = 'block';
                 } else {
-                    window.location.href = "/converter";
+                    window.location.href = "/login";
                 }
             } catch (error) {
                 console.error('Error:', error);
