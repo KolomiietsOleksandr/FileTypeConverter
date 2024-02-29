@@ -46,8 +46,8 @@ The File Converter Web Application offers a user-friendly platform to upload fil
 To begin, clone the repository to your local machine using the following command:
 
 ```bash
-git clone <repository_url>
-cd <repository_directory>
+git clone <https://github.com/KolomiietsOleksandr/FileTypeConverter>
+cd <FileTypeConverter>
 ```
 
 ### 2. Installing Dependencies
@@ -55,8 +55,22 @@ cd <repository_directory>
 Once the repository is cloned, install the necessary dependencies by running:
 
 ```bash
-npm install
+npm install express morgan body-parser express-session http fs path mongoose websocket cors
 ```
+
+These dependencies include:
+
+- `express`: Web framework for Node.js.
+- `morgan`: HTTP request logger middleware.
+- `body-parser`: Middleware to parse incoming request bodies.
+- `express-session`: Simple session middleware for Express.
+- `http`: HTTP server module.
+- `fs`: File system module.
+- `path`: Module for working with file and directory paths.
+- `mongoose`: MongoDB object modeling tool.
+- `websocket`: WebSocket library for Node.js.
+- `cors`: Middleware to enable Cross-Origin Resource Sharing.
+
 
 ### 3. Setting Up MongoDB
 
