@@ -134,7 +134,7 @@ Once the application is running, access it by opening a web browser and navigati
 
 ---
 
-## Additional Notes
+## Notes
 
 ### Session Management
 
@@ -170,15 +170,7 @@ These endpoints empower users to perform various actions within the application,
 
 ---
 
-## WebSocket Notifications
-
-WebSocket notifications serve as real-time communication
-
- channels, delivering updates and instructions to clients during the file conversion process. By leveraging WebSocket technology, the application enhances user engagement and interaction by providing timely and relevant information.
-
----
-
-## Notes
+## Additional Notes
 
 ### Supported File Types
 
