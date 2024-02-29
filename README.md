@@ -23,6 +23,7 @@ Welcome to the documentation for the File Converter Web Application. This compre
    - [WebSocket Notifications](#websocket-notifications)
    - [File Conversion](#file-conversion)
    - [Error Handling](#error-handling)
+   - [Caching User Data](#caching-user-data)
 5. [API Endpoints](#api-endpoints)
 6. [Additional Notes](#additional-notes)
    - [Supported File Types](#supported-file-types)
@@ -53,7 +54,7 @@ cd <FileTypeConverter>
 Once the repository is cloned, install the necessary dependencies by running:
 
 ```bash
-npm install express morgan body-parser express-session http fs path mongoose websocket cors
+npm install express morgan body-parser express-session http fs path mongoose websocket cors ioredis
 ```
 
 These dependencies include:
@@ -149,6 +150,16 @@ File conversion functionality is facilitated by a Django backend, utilizing Pyth
 ### Error Handling
 
 The application incorporates robust error handling mechanisms to gracefully manage errors and exceptions. In case of an error during user interactions, users are redirected to an error page, ensuring they are informed about any issues encountered and facilitating a seamless user experience.
+
+### Caching User Data
+
+User data caching is implemented using Redis to improve performance and reduce database load. When a user profile is fetched or modified, the data is cached for a specified period to serve subsequent requests more efficiently. This caching mechanism helps minimize database queries and enhances the overall responsiveness of the application.
+
+To enable caching, the application utilizes the `ioredis` library to interact with the Redis server. When fetching user profile data, the application first checks if the data exists in the cache. If cached data is found, it is returned directly to the client, avoiding unnecessary database queries. If the data is not cached, the application retrieves it from the database, caches it for future use, and then sends it to the client.
+
+Similarly, when a user updates their password or email, the cached user data is updated accordingly to ensure consistency between the cache and the database. Additionally, when a user account is deleted, the corresponding cached data is removed to maintain data integrity.
+
+The caching mechanism enhances the scalability and performance of the application, providing users with a smoother and more responsive experience.
 
 ---
 
