@@ -18,18 +18,17 @@ Welcome to the documentation for the File Converter Web Application. This compre
    - [Views](#views)
    - [Models](#models)
    - [Django Backend](#django-backend)
-4. [Additional Notes](#additional-notes)
+4. [Notes](#notes)
    - [Session Management](#session-management)
    - [WebSocket Notifications](#websocket-notifications)
    - [File Conversion](#file-conversion)
    - [Error Handling](#error-handling)
 5. [API Endpoints](#api-endpoints)
-6. [WebSocket Notifications](#websocket-notifications-1)
-7. [Notes](#notes)
+6. [Additional Notes](#additional-notes)
    - [Supported File Types](#supported-file-types)
    - [File Size Limit](#file-size-limit)
-8. [Conclusion](#conclusion)
-9. [Contact](#contact)
+7. [Conclusion](#conclusion)
+8. [Contact](#contact)
 
 ---
 
