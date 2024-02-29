@@ -1,7 +1,7 @@
 const User = require('../../models/userModel');
 const { v4: uuidv4 } = require('uuid');
 
-exports.registerUser = async (req, res, ) => {
+exports.registerUser = async (req, res) => {
   const { name, email, password } = req.body;
 
   try {
