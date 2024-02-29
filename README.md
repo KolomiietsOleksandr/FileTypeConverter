@@ -28,7 +28,6 @@ Welcome to the documentation for the File Converter Web Application. This compre
    - [Supported File Types](#supported-file-types)
    - [File Size Limit](#file-size-limit)
 7. [Conclusion](#conclusion)
-8. [Contact](#contact)
 
 ---
 
