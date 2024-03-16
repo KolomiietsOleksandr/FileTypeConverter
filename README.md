@@ -1,4 +1,4 @@
-![image](https://github.com/KolomiietsOleksandr/FileTypeConverter/assets/115143584/befa32d2-ea1f-4005-8ba7-996e65ee5094)# File Converter Web Application Documentation
+# File Converter Web Application Documentation
 
 Welcome to the documentation for the File Converter Web Application. This comprehensive guide will help you understand the structure of the application, set it up, and use its features effectively.
 
