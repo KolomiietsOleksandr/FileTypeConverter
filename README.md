@@ -1,4 +1,4 @@
-# File Converter Web Application Documentation
+![image](https://github.com/KolomiietsOleksandr/FileTypeConverter/assets/115143584/befa32d2-ea1f-4005-8ba7-996e65ee5094)# File Converter Web Application Documentation
 
 Welcome to the documentation for the File Converter Web Application. This comprehensive guide will help you understand the structure of the application, set it up, and use its features effectively.
 
@@ -194,25 +194,25 @@ For efficient processing and resource utilization, files larger than 10MB requir
 ## Usage
 
 1. Click on the corresponding buttons to go to the file converter itself.
-![1](https://media.discordapp.net/attachments/856234593153056781/1212757643324817408/2024-02-29_15.34.37.png?ex=65f2ff92&is=65e08a92&hm=864a2f51fa1fe280945ec9804c6f7e25c88293fb417742ffeeaf22fce0ca9dbf&=&format=webp&quality=lossless&width=2092&height=1304)
+![1](https://media.discordapp.net/attachments/856234593153056781/1212757643324817408/2024-02-29_15.34.37.png?ex=66057492&is=65f2ff92&hm=fdf9a8db49a0793babd00508c71dc0ff722c66d9929a893cef0304407ac54f13&=&format=webp&quality=lossless&width=705&height=440)
 
 2. If your file is less than 10 megabytes, you can start converting it right away. Click or drag your file to the appropriate area.
-![2](https://media.discordapp.net/attachments/856234593153056781/1212757643890925608/2024-02-29_15.38.20.png?ex=65f2ff92&is=65e08a92&hm=f67198552e35d05f734f251275909eb29f988067e97f90a6ec1a64949910f606&=&format=webp&quality=lossless&width=2260&height=1304)
+![2](https://media.discordapp.net/attachments/856234593153056781/1212757643890925608/2024-02-29_15.38.20.png?ex=66057492&is=65f2ff92&hm=62d1db27c1c06fe93c786e55ef4f2c111391dfecc64ac0f2b3059fdfd9411444&=&format=webp&quality=lossless&width=705&height=407)
 
 3. Here you can see some information about your file and choose a new available format for conversion from the drop-down list. Click on the spear and wait for the conversion to complete.
-![3](https://media.discordapp.net/attachments/856234593153056781/1212757645216321607/2024-02-29_15.40.00.png?ex=65f2ff92&is=65e08a92&hm=52648e2b87ff668bf946ad60f2d302bd61696e3149d01ed7c1aa52f4116145f9&=&format=webp&quality=lossless&width=2592&height=662)
+![3](https://media.discordapp.net/attachments/856234593153056781/1212757644348235806/2024-02-29_15.39.19.png?ex=66057492&is=65f2ff92&hm=1cad70ccdd5ebd55844e69fc210c2567c80a72b33d05cbd99074b1121b798b54&=&format=webp&quality=lossless&width=705&height=439)
 
 4. After successful conversion, the file will be automatically downloaded and you will be notified.
-![5](https://media.discordapp.net/attachments/856234593153056781/1212757645568516106/2024-02-29_15.41.06.png?ex=65f2ff92&is=65e08a92&hm=a75c849d1b2f1aa296a9c441f7d56050689a19f3f062271c466dd9114bb626cd&=&format=webp&quality=lossless&width=2592&height=820)
+![5](https://media.discordapp.net/attachments/856234593153056781/1212757644826116156/2024-02-29_15.39.32.png?ex=66057492&is=65f2ff92&hm=23b467d3a738e67a11153b4679b48647fea3a872a3f3d8a81b0586082b5d3e06&=&format=webp&quality=lossless&width=705&height=440)
 
 5. To convert files larger than 10MB, you will need to register. Where you will be asked to provide your details: Name, email and password.
-![6](https://media.discordapp.net/attachments/856234593153056781/1212757644348235806/2024-02-29_15.39.19.png?ex=65f2ff92&is=65e08a92&hm=005f64267dd43b5b09129042bb500030c27c574781967d29f65f621542e9c1b7&=&format=webp&quality=lossless&width=2096&height=1304)
+![6](https://media.discordapp.net/attachments/856234593153056781/1212757645216321607/2024-02-29_15.40.00.png?ex=66057492&is=65f2ff92&hm=9bcdf0a1047a6edecdc8f21558d127d854b8060a51b8ad21bc273ff667fa6a9f&=&format=webp&quality=lossless&width=705&height=180)
 
 6. To log in to your profile, you only need to correctly enter the data you entered during registration.
-![7](https://media.discordapp.net/attachments/856234593153056781/1212757644826116156/2024-02-29_15.39.32.png?ex=65f2ff92&is=65e08a92&hm=951b9768519c0d8f6c2e2f0665bbfe87dd81dbbdef29bfac8f2062afc9df19ac&=&format=webp&quality=lossless&width=2088&height=1304)
+![7](https://media.discordapp.net/attachments/856234593153056781/1212757645568516106/2024-02-29_15.41.06.png?ex=66057492&is=65f2ff92&hm=d3654e8ecacb7b138ab168c2e9ec0a0e164e4724e27bd67696925a0e24bc7e96&=&format=webp&quality=lossless&width=705&height=223)
 
 7. To change your email or password, you need to fill in the appropriate fields in your profile and click the button.
-![8](https://media.discordapp.net/attachments/856234593153056781/1212757646021759028/2024-02-29_15.41.27.png?ex=65f2ff92&is=65e08a92&hm=8506b4d3a6073136315c99950f7705ffb4124004b6251a8a183efde022e85901&=&format=webp&quality=lossless&width=2082&height=1304)
+![8](https://media.discordapp.net/attachments/856234593153056781/1212757646021759028/2024-02-29_15.41.27.png?ex=66057492&is=65f2ff92&hm=97000ffc70a8781af958402c9d427dc085772699ec0cfaf693f8482485fc03aa&=&format=webp&quality=lossless&width=705&height=442)
 
 ---
 
